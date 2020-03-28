@@ -1,0 +1,25 @@
+<div class="sidebar-list">
+    {% for item in include.datalist %}
+        
+        {% capture path %}{{ include.currentpath | default: "docs" }}/{{ item.path }}{% endcapture %}
+
+        {% assign startsWithLength = path | size %}
+        {% assign startsWithComp = page.path | slice:0,startsWithLength %}
+
+        {% if item.subitems %}
+            <details class="sidebar-expander"{% if path == startsWithComp %} open{% endif %}>
+                <summary>{{ item.name }}</summary>
+                {% include sidebar.html datalist=item.subitems currentpath=path %}
+            </details>
+        {% else %}
+            {% assign linkedpage = site.pages | where:"path",path | first %}
+            {% assign url = linkedpage.url | default:item.url | default:path %}
+            {% assign title = item.name | default:linkedpage.title | default:linkedpage.url | default:item.url | default:path %}
+            {% assign isCurrent = false %}
+            {% if page.url == linkedpage.url %}{% assign isCurrent = true %}{% endif %}
+            {% if page.url == url %}{% assign isCurrent = true %}{% endif %}
+
+            <a class="sidebar-item link-unstyled{% if isCurrent %} active{% endif %}" href="{{ url }}">{{ title }}</a>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,15 @@
+- path: introduction.md
+- name: Scripting API
+  path: scripting
+  subitems:
+    - name: Overview
+      path: overview.md
+    - name: Getting Started
+      path: getting-started.md
+    - name: Tutorials
+      path: tutorials
+      subitems:
+        - path: example-1.md
+- path: experimental-gameplay.md
+- path: tools.md
+- path: links.md

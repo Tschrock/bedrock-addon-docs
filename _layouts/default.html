@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include favicon.html %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% include meta.html %}
+    <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body class="layout-main">
+    <div class="layout-main-header">
+        <a class="header-brand" href="/">
+            <img src="/img/icon-64.png" />
+            {{ site.title }}
+        </a>
+    </div>
+    <div class="layout-main-sidebar">
+        <div class="sticky-scroll">
+            {% include sidebar.html datalist=site.data.sidebar %}
+        </div>
+    </div>
+    <div class="layout-main-content">
+        <div class="article-header">
+            <h1 class="article-title">{{ page.title }}</h1>
+            <div class="article-meta">
+                {% if page.author %}<div class="meta-item"><b>Author:</b> {{ page.author }}</div>{% endif %}
+                {% if page.date %}<div class="meta-item"><b>Date:</b> {{ page.date | date: "%b %d, %Y" }}</div>{% endif %}
+                {% if page.version %}<div class="meta-item"><b>Version:</b> {{ page.version }}</div>{% endif %}
+            </div>
+        </div>
+        <div class="article-content">
+            {{ content }}
+        </div>
+    </div>
+</body>
+</html>

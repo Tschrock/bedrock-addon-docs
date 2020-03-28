@@ -1,0 +1,31 @@
+<meta property="og:site_name" content="{{ site.title }}">
+
+<meta property="og:title" content="{{ page.title }}">
+<meta name="twitter:title" content="{{ page.title }}">
+
+{% assign description = page.description | default:site.description %}
+<meta name="description" content="{{ description }}">
+<meta property="og:description" content="{{ description }}">
+<meta name="twitter:description" content="{{ description }}">
+
+{% assign url = page.url | absolute_url %}
+<meta property="og:url" content="{{ url }}">
+<link rel="canonical" href="{{ url }}">
+
+{% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
+{% if page.author_twitter %}<meta name="twitter:creator" content="@{{ page.author_twitter }}">{% endif %}
+
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+
+{% assign image = "/img/icon-128.png" | absolute_url %}
+<meta property="og:image" content="{{ image }}">
+<meta name="twitter:image" content="{{ image }}">
+<meta name="twitter:image:alt" content="Icon">
+
+<meta property="og:locale" content="en_US">
+{% if site.twitter_username %}<meta name="twitter:site" content="@{{ site.twitter_username }}">{% endif %}
+{% if page.version %}
+    <meta name="twitter:label1" content="Version">
+    <meta name="twitter:data1" content="{{ page.version }}">
+{% endif %}

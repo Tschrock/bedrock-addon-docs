@@ -1,0 +1,15 @@
+title: Bedrock Add-Ons
+email: cyber@code.horse
+description: >-
+  Documentation for Minecraft Bedrock Add-Ons.
+baseurl: ""
+url: ""
+twitter_username: CyberPon3
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
