@@ -170,6 +170,7 @@ details[open] > summary:before {
  * Main Layout
  */
 .layout-main {
+    background-color: var(--header-bg);
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 0.45fr 1.55fr;
@@ -216,9 +217,15 @@ details[open] > summary:before {
         grid-template-columns: 1fr;
         grid-template-areas: "header" "sidebar" "content";
     }
+    .layout-main-sidebar {
+        border-right: none;
+        border-bottom: var(--sidebar-border);
+    }
     .sticky-scroll {
         position: relative;
         max-height: none;
         overflow: visible;
     }
+    
+
 }
