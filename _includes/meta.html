@@ -1,8 +1,7 @@
 <meta property="og:site_name" content="{{ site.title }}">
 
-{% capture title %}{{ page.title }} | {{ site.title }}{% endcapture %}
-<meta property="og:title" content="{{ title }}">
-<meta name="twitter:title" content="{{ title }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta name="twitter:title" content="{{ page.title }}">
 
 {% assign description = page.description | default:site.description %}
 <meta name="description" content="{{ description }}">
