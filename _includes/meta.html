@@ -1,7 +1,8 @@
 <meta property="og:site_name" content="{{ site.title }}">
 
-<meta property="og:title" content="{{ page.title }}">
-<meta name="twitter:title" content="{{ page.title }}">
+{% capture title %}{{ page.title }} | {{ site.title }}{% endcapture %}
+<meta property="og:title" content="{{ title }}">
+<meta name="twitter:title" content="{{ title }}">
 
 {% assign description = page.description | default:site.description %}
 <meta name="description" content="{{ description }}">
@@ -15,11 +16,14 @@
 {% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
 {% if page.author_twitter %}<meta name="twitter:creator" content="@{{ page.author_twitter }}">{% endif %}
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary">
 
 {% assign image = "/img/icon-128.png" | absolute_url %}
 <meta property="og:image" content="{{ image }}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="128">
+<meta property="og:image:height" content="128">
 <meta name="twitter:image" content="{{ image }}">
 <meta name="twitter:image:alt" content="Icon">
 

@@ -1,6 +1,6 @@
 ---
-title: Homepage
-layout: default
+title: Add-On Documentation
+layout: homepage
 ---
 
 Hello World!

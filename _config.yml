@@ -3,7 +3,7 @@ email: cyber@code.horse
 description: >-
   Unofficial documentation for Minecraft Bedrock Add-Ons.
 baseurl: ""
-url: "http://bedrock.nerd.horse"
+url: "https://bedrock.nerd.horse"
 twitter_username: CyberPon3
 
 # Build settings
