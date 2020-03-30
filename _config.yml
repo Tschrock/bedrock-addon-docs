@@ -13,3 +13,9 @@ plugins:
 
 kramdown:
   smart_quotes: ["apos", "apos", "quot", "quot"]
+
+defaults:
+- scope:
+    path: ""
+  values:
+    layout: "default"

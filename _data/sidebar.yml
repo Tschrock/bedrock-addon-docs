@@ -1,12 +1,13 @@
-- path: introduction.md
-- name: Scripting API
+- label: Introduction
+  path: introduction.md
+- label: Scripting API
   path: scripting
   subitems:
-    - name: Overview
+    - label: Overview
       path: overview.md
-    - name: Getting Started
+    - label: Getting Started
       path: getting-started.md
-    - name: Tutorials
+    - label: Tutorials
       path: tutorials
       subitems:
         - path: example-1.md

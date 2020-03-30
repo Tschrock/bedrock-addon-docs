@@ -1,6 +1,6 @@
 ---
 title: Add-On Documentation
-layout: homepage
+header: false
 ---
 
 Hello World!

@@ -8,13 +8,13 @@
 
         {% if item.subitems %}
             <details class="sidebar-expander"{% if path == startsWithComp %} open{% endif %}>
-                <summary>{{ item.name }}</summary>
+                <summary>{{ item.label }}</summary>
                 {% include sidebar.html datalist=item.subitems currentpath=path %}
             </details>
         {% else %}
             {% assign linkedpage = site.pages | where:"path",path | first %}
             {% assign url = linkedpage.url | default:item.url | default:path %}
-            {% assign title = item.name | default:linkedpage.title | default:linkedpage.url | default:item.url | default:path %}
+            {% assign title = item.label | default:linkedpage.header | default:linkedpage.title | default:linkedpage.url | default:item.url | default:path %}
             {% assign isCurrent = false %}
             {% if page.url == linkedpage.url %}{% assign isCurrent = true %}{% endif %}
             {% if page.url == url %}{% assign isCurrent = true %}{% endif %}

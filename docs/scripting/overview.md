@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Introduction to the Scripting API
+title: Introduction to the Bedrock Scripting API
+header: Introduction to the Scripting API
 date: 2020-3-15
 version: 1.14
 ---
